@@ -49,7 +49,7 @@ class BotCommander(Frame):
         with open ('posts_replied_to.txt', 'r') as posts_replied_to:          
                 replies = posts_replied_to.read().split(',')
         for comment in checked_comments:                                                  #loop through all of the comments in the comment stream
-            comment.body = comment.body.lower()                                           #encode/decode yet (emojis were messing me up)
+            comment.body = comment.body.lower()                 
             if comment in replies:
                 pass
             elif comment.body.startswith('repeat after me'):                            #if comment starts with repeat after me
